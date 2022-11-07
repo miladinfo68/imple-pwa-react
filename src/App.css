@@ -1,0 +1,75 @@
+html,
+body,
+#root {
+    font: .9rem sans-serif;
+    background-color: #0a1f44;
+    color: #1e2432;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+
+#root {
+    background: url('../public/images/02.jpg') no-repeat;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    width: 25rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+}
+
+.city-card {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    min-height: 20rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.city-name sup {
+    background-color: #e3a812;
+    padding: 0.5rem;
+    border-radius: 1rem 1rem 2rem 2rem;
+}
+
+.city-temp {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media screen and (max-width:375px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search,
+    .city-card {
+        width: 22rem;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="This is simple pwa weather application, developed by reactjs version 18.0" />
+
+    <link rel="icon" href="images/icons/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+
+    <link rel="manifest" href="./manifest.json" />
+    <title>weather PWA App</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(res => console.log("ServiceWorker Loaded : ", res.scope))
+            .catch(err => console.log("Failure: ", err));
+        })
+      } else {
+        console.error("Service Worker not support!")
+      }
+    </script>
+  </body>
+
+</html>
